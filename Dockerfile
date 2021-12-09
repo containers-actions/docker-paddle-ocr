@@ -1,5 +1,5 @@
 FROM fangzhengjin/paddlehub:2.2.1
-LABEL maintainer=fangzhengjin <fangzhengjin@gmail.com>
+LABEL maintainer "fangzhengjin <fangzhengjin@gmail.com>"
 
 RUN install_packages g++ libglib2.0-0 libsm6 libxrender1 libxext6 && \
 wget -P /app https://github.com/PaddlePaddle/PaddleOCR/archive/refs/tags/v2.1.1.tar.gz && \
