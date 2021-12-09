@@ -11,4 +11,4 @@ hub install /app/deploy/hubserving/ocr_rec/
 
 EXPOSE 9000
 
-CMD ["/bin/bash","-c","hub serving start --modules ocr_rec -p 9000"]
+CMD ["/bin/bash", "-c", "hub serving start --modules ocr_rec -p 9000"]
