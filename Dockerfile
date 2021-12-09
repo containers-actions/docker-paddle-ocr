@@ -1,7 +1,8 @@
 FROM fangzhengjin/paddlehub:2.2.1
 LABEL maintainer=fangzhengjin <fangzhengjin@gmail.com>
 
-RUN wget -P /app https://ghproxy.com/https://github.com/PaddlePaddle/PaddleOCR/archive/refs/tags/v2.1.1.tar.gz && \
+RUN install_packages g++ libglib2.0-0 libsm6 libxrender1 libxext6 && \
+wget -P /app https://github.com/PaddlePaddle/PaddleOCR/archive/refs/tags/v2.1.1.tar.gz && \
 tar xzf /app/v2.1.1.tar.gz -C /app/ && cp /app/PaddleOCR-2.1.1/* /app/ -rf && rm -rf /app/PaddleOCR-2.1.1 /app/v2.1.1.tar.gz && \
 pip3.7 install -r requirements.txt && rm -rf /root/.cache/* && \
 wget -P /app/inference https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_mobile_v2.0_rec_infer.tar && \
